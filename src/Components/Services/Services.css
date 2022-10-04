@@ -1,0 +1,47 @@
+.services{
+    padding: 0 3rem 0 4.2rem;
+    display: flex;
+    height: 90vh;
+    margin-bottom: 8rem;
+    margin-top: 0rem;
+}
+.s-left{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.s-left> :nth-child(1){
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+.s-left> :nth-child(2){
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--orange);
+}
+.s-left> :nth-child(3){
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+}
+.s-button{
+    width: 8rem;
+    height: 2rem;
+}
+.s-r-cards{
+    position: relative;
+}
+.s-r-cards>*{
+    position: absolute;
+}
+.s-blur2{
+    left: 36rem;
+    top: 5rem;
+}
+.s-blur1{
+    top: 13rem;
+    left: -55rem;
+}
