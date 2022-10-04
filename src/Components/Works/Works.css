@@ -1,9 +1,10 @@
 .works{
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 80vh;
-    margin-top: 4rem;
+    height: 46vh;
+    margin-top: 3rem;
     align-items: center;
+    margin-bottom: 5rem;
 }
 .w-l-blur{
     top: 13rem;

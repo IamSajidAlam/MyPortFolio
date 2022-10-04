@@ -18,7 +18,7 @@ import {Swiper,  SwiperSlide} from 'swiper/react';
 
 const Portfolio = () => {
   return (
-    <div className="portfolio">
+    <div className="portfolio" id='Portfolio'>
         {/*Heading*/}
         <span>Recent Projects</span>
         <span>Portfolio</span>
