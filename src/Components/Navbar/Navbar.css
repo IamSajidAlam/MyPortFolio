@@ -40,3 +40,12 @@ li:hover{
 .n-button{
     flex: 1;
 }
+
+@media screen and (max-width : 480px){
+    .n-list{
+        display: none;
+    }
+    .n-button{
+        display: none;
+    }
+}

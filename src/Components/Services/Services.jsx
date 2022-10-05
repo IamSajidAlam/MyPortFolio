@@ -5,7 +5,14 @@ import GlassesEmoji from '../../img/glasses.png'
 import HumbleEmoji from '../../img/humble.png'
 import Card from '../Card/Card'
 import Resume from './SajidAlam.pdf'
+import { motion } from 'framer-motion'
 const Services = () => {
+
+
+  const transition = { duration: 2, type: "spring" };
+
+
+
   return (
     <div className="services" id='Services'>
       {/*Left Side */}
@@ -13,53 +20,66 @@ const Services = () => {
         <span>My Awesome</span>
         <span>Services</span>
         <span><b>I ANALYZE CUSTOMER NEEDS, DESIGN AND CREATE INNOVATIVE PRODUCTS</b>
-          <br/>
-          Being a passionate learner, I constantly explore in different
-          fields to strengthen my IT skills. Combining my multi-cultural 
-          background, 
           <br />
-          Business IT knowledge, and energized personality, 
-          all together give me a unique design perspective. 
+          Being a passionate learner, I constantly explore in different
+          fields to strengthen my IT skills. Combining my multi-cultural
+          background,
+          <br />
+          Business IT knowledge, and energized personality,
+          all together give me a unique design perspective.
           <br />
           My greatest strength is my confidence in challenging the status quo.
-          </span>
-          <a style={{width : '8rem'}} href={Resume} download>
+        </span>
+        <a style={{ width: '8rem' }} href={Resume} download>
           <button className="button s-button">Download CV</button>
-          </a>
-          
-          <div className="blur s-blurl" style={{
-            background: "#ABF1FF94"
-            }}></div>
+        </a>
+
+        <div className="blur s-blurl" style={{
+          background: "#ABF1FF94"
+        }}></div>
       </div>
 
       {/*Right Side */}
       <div className="s-r-cards">
         {/*First Card*/}
-        <div style={{left: '22rem'}}>
+        <motion.div
+          initial={{ left: "25%" }}
+          whileInView={{ left: "22rem" }}
+          transition={transition}
+        >
           <Card
-          emoji = {HeartEmoji}
-          heading = {'Design'}
-          details = {"Figma, Sketch, Photoshop, Adobe, Adobe XD"}
+            emoji={HeartEmoji}
+            heading={'Design'}
+            details={"Figma, Sketch, Photoshop, Adobe, Adobe XD"}
           />
-        </div>
+        </motion.div>
+
         {/*Second Card*/}
-        <div style={{top: '8rem', left: '5rem'}}>
+        <motion.div
+          initial={{top:'12rem', left: "25rem" }}
+          whileInView={{left: "2rem" }}
+          transition={transition}
+        >
           <Card
-          emoji = {GlassesEmoji}
-          heading = {'Developer'}
-          details = {"Html, Css, JavaScript, React, Java, Python"}
+            emoji={GlassesEmoji}
+            heading={'Developer'}
+            details={"Html, Css, JavaScript, React, Java, Python"}
           />
-        </div>
+        </motion.div>
         {/*Third Card*/}
-        <div style={{ top: '18rem',left: '20rem'}}>
+        <motion.div 
+        initial={{ top: "18rem", left: "25rem" }}
+        whileInView={{ left: "20rem" }}
+        
+        >
           <Card
-          emoji = {HumbleEmoji}
-          heading = {'AI / ML'}
-          details = {"Data Analytics, Business Analytics, Mechine Learning, Data Mining"}
+            emoji={HumbleEmoji}
+            heading={'AI / ML'}
+            details={"Data Analytics, Business Analytics, Mechine Learning, Data Mining"}
           />
-        </div>
-        <div className="blur s-blur1" style={{background: '#C1F5FF'}}></div>
-        <div className="blur s-blur2" style={{background : 'var(--purple)'}}></div>
+        </motion.div>
+        <div className="blur s-blur1" style={{ background: '#C1F5FF' }}></div>
+        <div className="blur s-blur2" style={{ background: 'var(--purple)' }}></div>
       </div>
 
     </div>
