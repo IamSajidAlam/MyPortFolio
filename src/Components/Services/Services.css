@@ -45,3 +45,21 @@
     top: 13rem;
     left: -55rem;
 }
+
+@media screen and (max-width: 480px){
+    .services{
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 66rem;
+        padding: 0;
+    }
+    .s-r-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 17rem;
+    }
+    .s-r-cards>*{
+        position: static;
+    }
+}

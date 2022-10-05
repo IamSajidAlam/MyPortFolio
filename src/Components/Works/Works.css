@@ -1,55 +1,65 @@
-.works{
+.works {
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 46vh;
-    margin-top: 3rem;
+    height: 90vh;
+    margin-top: 4rem;
     align-items: center;
     margin-bottom: 5rem;
 }
-.w-l-blur{
+
+.w-l-blur {
     top: 13rem;
     left: -75rem;
 }
+
 /*right side*/
-.w-right{
+.w-right {
     position: relative;
     display: flex;
 }
-.w-mainCircle{
-    position: relative;
+
+.w-mainCircle {
     left: 20rem;
-    top: 2rem;
+    position: relative;
     width: 18rem;
     height: 18rem;
     border-radius: 100%;
-    background: white;
     box-shadow: var(--smboxShadow);
+    top: 2rem;
+    background: white;
 }
-.w-mainCircle > * {
+
+.w-mainCircle>* {
     position: absolute;
 }
-.w-mainCircle > :nth-child(1){
+
+.w-mainCircle> :nth-child(1) {
     top: -3rem;
     left: 6rem;
 }
-.w-mainCircle > :nth-child(2){
+
+.w-mainCircle> :nth-child(2) {
     left: -3rem;
     top: 5rem;
 }
-.w-mainCircle > :nth-child(3){
+
+.w-mainCircle> :nth-child(3) {
     top: 5rem;
     left: 6rem;
 }
-.w-mainCircle > :nth-child(4){
+
+.w-mainCircle> :nth-child(4) {
     top: 5rem;
     left: 15rem;
 }
-.w-mainCircle > :nth-child(5){
+
+.w-mainCircle> :nth-child(5) {
     top: 13rem;
     left: 6rem;
 }
+
 /*Secondary Circle*/
-.w-secCircle{
+.w-secCircle {
     width: 6rem;
     height: 6rem;
     position: absolute;
@@ -62,25 +72,64 @@
     box-shadow: var(--smboxShadow);
     background: white;
 }
-.w-secCircle > img{
+
+.w-secCircle>img {
     transform: scale(0.6);
 }
 
 
-.w-backCircle{
+.w-backCircle {
     position: absolute;
     height: 13rem;
     width: 13rem;
     border-radius: 100%;
     z-index: -1;
 }
+
 .blueCircle {
     background: #1949b8;
     left: 10rem;
     top: 0rem;
-  }
-  .yellowCircle {
+}
+
+.yellowCircle {
     background: #f5c32c;
     left: 10rem;
     top: 7rem;
-  }
+}
+
+@media screen and (max-width: 480px) {
+    .works {
+        flex-direction: column;
+        height: 55rem;
+        padding: 0;
+        gap: 5rem;
+    }
+
+    .w-right {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        transform: scale(0.7);
+    }
+
+    .w-mainCircle {
+        position: static;
+        height: 14rem;
+        width: 14rem;
+    }
+
+    .w-backCircle {
+        left: 8rem !important;
+        height: 9.5rem;
+        width: 9.5rem;
+    }
+
+    .w-secCircle {
+        width: 4rem;
+        height: 4rem;
+    }
+    .w-secCircle>img {
+        transform: scale(0.4);
+    }
+}

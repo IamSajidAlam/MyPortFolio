@@ -58,7 +58,7 @@ const Intro = () => {
           initial={{ top: '-4%', left: "74%" }}
           whileInView={{ left: "68%" }}
           transition={transition}
-
+          className="floating-div"
         >
           <FloatingDiv image={Crown} txt1='Full Stack' txt2='Developer' />
         </motion.div>
@@ -68,7 +68,7 @@ const Intro = () => {
           initial={{ left: "9rem", top: '18rem' }}
           whileInView={{ left: "0%" }}
           transition={transition}
-          className="floating-div"
+          
         >
           <FloatingDiv image={Thumbup} txt1='Best Design' txt2='Award' />
         </motion.div>
