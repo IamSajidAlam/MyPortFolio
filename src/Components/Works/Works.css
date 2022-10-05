@@ -109,8 +109,9 @@
     .w-right {
         display: flex;
         align-items: flex-start;
-        justify-content: start;
         transform: scale(0.7);
+        align-self: flex-end;
+        
     }
 
     .w-mainCircle {
