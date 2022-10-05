@@ -10,6 +10,7 @@ import Thumbup from '../../img/thumbup.png'
 import Vector1 from '../../img/Vector1.png'
 import Vector2 from '../../img/Vector2.png'
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
+import {Link} from 'react-scroll'
 
 const Intro = () => {
   return (
@@ -22,7 +23,10 @@ const Intro = () => {
                     level of experience in Web / App Designing and 
                     Development, Producting Quality work</span>                
             </div>
-            <button className="button i-button">Hire Me</button>
+            <Link spy={true} to='Contact' smooth={true} activeClass="activeClass">
+              <button className="button i-button" id='Conract'>Hire Me</button>
+            </Link>
+            
             <div className="i-icons">
               <a href="https://github.com/IamSajidAlam">
               <img src={Github} alt="" />

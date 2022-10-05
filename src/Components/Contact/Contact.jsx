@@ -30,7 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form" id="contact">
+    <div className="contact-form" id="Contact">
       {/* left side copy and paste from work section */}
       <div className="w-left">
         <div className="s-left">
