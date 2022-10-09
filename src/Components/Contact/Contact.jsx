@@ -1,11 +1,21 @@
 import React from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => {
-    const form = useRef();
-
-    const [done, setDone] = useState(false);
+  const form = useRef();
+  // const [done, setDone] = useState(false);
+  const notify = () => toast.success('Thanks for Contacting me', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,13 +30,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true);         
+          // setDone(true);         
         },
         (error) => {
           console.log(error.text);
         }
       );
-      form.current.reset(); 
+    form.current.reset();
   };
 
   return (
@@ -46,11 +56,22 @@ const Contact = () => {
       {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Name"/>
-          <input type="email" name="user_email" className="user" placeholder="Email"/>
-          <textarea name="message" className="user" placeholder="Message"/>
-          <input type="submit" value="Send" className="button"/>
-          <span>{done && "Thanks for Contacting me"}</span>
+          <input type="text" name="user_name" className="user" placeholder="Name" />
+          <input type="email" name="user_email" className="user" placeholder="Email" />
+          <textarea name="message" className="user" placeholder="Message" />
+          <input type="submit" value="Send" className="button" onClick={notify} />
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+          {/* <span>{done && "Thanks for Contacting me"}</span> */}
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}
