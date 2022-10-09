@@ -13,6 +13,7 @@
 }
 .card > img{
     transform: scale(0.7);
+    margin-top: -1rem;
     margin-bottom: -2rem;
 }
 .card span:nth-of-type(2){

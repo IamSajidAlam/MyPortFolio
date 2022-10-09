@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import Wave from '../../img/wave.png'
-import Insta from '@iconscout/react-unicons/icons/uil-instagram'
+import Insta from '@iconscout/react-unicons/icons/uil-whatsapp'
 import Facebook from '@iconscout/react-unicons/icons/uil-facebook'
 import GitHub from '@iconscout/react-unicons/icons/uil-github'
 
@@ -10,9 +10,11 @@ const Footer = () => {
     <div className="footer">
       <img src={Wave} alt="" style={{width: '100%'}}/>
       <div className="f-content">
-        <span>iamsajidalam@outlook.com</span>
+        <a href="mailto:iamsajidalam@outlook.com?">
+          <span>iamsajidalam@outlook.com</span>
+        </a>
         <div className="f-icons">
-          <a href="https://www.instagram.com/i_am_sid_alm/">
+          <a href="https://wa.me/message/QD4XQ7YE4H2RG1">
             <Insta color='white' size='3rem'/>
           </a>
           <a href="https://www.facebook.com/sajidalamshubho">

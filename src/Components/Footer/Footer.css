@@ -14,6 +14,10 @@
     gap: 4rem;
     color: white;
 }
+.f-content > a{
+    color: white;
+    text-decoration:unset;
+}
 .f-icons{
     gap: 2rem;
 }

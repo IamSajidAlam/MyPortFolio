@@ -20,13 +20,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true);
-          form.reset();          
+          setDone(true);         
         },
         (error) => {
           console.log(error.text);
         }
       );
+      form.current.reset(); 
   };
 
   return (
